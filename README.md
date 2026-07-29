@@ -4,8 +4,8 @@ An infinite voxel sandbox game in a **single HTML file**. No dependencies, no bu
 step required to play, no network access, no external assets. Every texture is
 painted by code at load time and every sound is synthesized with the Web Audio API.
 
-**To play: double-click `blockcraft.html`.** (Requires a browser with WebGL 2:
-current Chrome, Edge, Firefox or Safari.)
+**To play: download `blockcraft.html` and open it in your browser.** (Requires a
+browser with WebGL 2: current Chrome, Edge, Firefox or Safari.)
 
 ---
 
@@ -88,7 +88,7 @@ into a `<script type="text/x-worker">` tag, then:
 
 Because Blob workers are blocked on `file://` in some browsers, a watchdog falls
 back to running that identical code on the main thread in time-sliced chunks, so
-the file works whether you double-click it or serve it over HTTP.
+the file works whether you open it directly or serve it over HTTP.
 
 Other notes:
 - Chunks are 16×128×16. Mesh vertices are packed into **8 bytes** (two `uint32`s:
