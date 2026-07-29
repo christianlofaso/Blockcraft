@@ -6,7 +6,7 @@ var HELP_TEXT =
   '<b>Hotbar</b> 1-9 or scroll &nbsp; <b>Chat / commands</b> T or / &nbsp; <b>Debug</b> F3<br>' +
   '<b>Fly</b> (creative) double-tap Space &nbsp; <b>Third person</b> F5 &nbsp; <b>Menu</b> Esc<br><br>' +
   'Punch a tree to get wood, craft planks, then a crafting table and tools. ' +
-  'Torches keep monsters away — they spawn in the dark. Sleep is not implemented, so ' +
+  'Torches keep monsters away. They spawn in the dark. Sleep is not implemented, so ' +
   'build a shelter before the first night.';
 
 function boot() {
@@ -99,7 +99,7 @@ function startGame(seed, mode, dist, save) {
       clearInterval(iv);
       hideLoading();
       setTimeout(function () { requestLock(); }, 300);
-      chat('Welcome to Blockcraft — press T for chat, /help for commands');
+      chat('Welcome to Blockcraft: press T for chat, /help for commands');
       if (!save) chat('Seed: ' + seed);
     }
   }, 100);

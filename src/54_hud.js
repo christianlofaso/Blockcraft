@@ -84,7 +84,7 @@ function updateDebug() {
   var light = c.lightAt(bx, by + 1, bz, 1);
   var s = GAME.stats || {};
   document.getElementById('debug').textContent =
-    'Blockcraft — ' + GAME.fps + ' fps   (' + (c.link.mode) + ' worker)\n' +
+    'Blockcraft: ' + GAME.fps + ' fps   (' + (c.link.mode) + ' worker)\n' +
     'XYZ ' + p.x.toFixed(2) + ' / ' + p.y.toFixed(2) + ' / ' + p.z.toFixed(2) + '\n' +
     'Block ' + bx + ' ' + by + ' ' + bz + '   Chunk ' + (bx >> 4) + ' ' + (bz >> 4) + '\n' +
     'Facing ' + facing + '   Biome ' + (biome ? biome.name : '?') + '\n' +

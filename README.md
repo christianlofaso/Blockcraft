@@ -1,10 +1,10 @@
 # Blockcraft
 
 An infinite voxel sandbox game in a **single HTML file**. No dependencies, no build
-step required to play, no network access, no external assets — every texture is
+step required to play, no network access, no external assets. Every texture is
 painted by code at load time and every sound is synthesized with the Web Audio API.
 
-**To play: double-click `minecraft.html`.** (Requires a browser with WebGL 2 —
+**To play: double-click `minecraft.html`.** (Requires a browser with WebGL 2:
 current Chrome, Edge, Firefox or Safari.)
 
 ---
@@ -13,7 +13,7 @@ current Chrome, Edge, Firefox or Safari.)
 
 **World**
 - Infinite procedurally generated terrain from a seed you choose
-- 14 biomes — plains, forest, birch forest, jungle, savanna, desert, taiga, snowy
+- 14 biomes: plains, forest, birch forest, jungle, savanna, desert, taiga, snowy
   tundra, mountains, swamp, beach, stone shore, ocean, deep ocean
 - Rivers, oceans, beaches, caves (tunnels + caverns), lava pools, clay banks
 - Depth-based ore distribution: coal, iron, gold, redstone, lapis, emerald, diamond
@@ -24,7 +24,7 @@ current Chrome, Edge, Firefox or Safari.)
 **Simulation**
 - Full flood-fill lighting: sunlight and coloured block light, propagated across
   chunk borders, with smooth per-vertex lighting and ambient occlusion
-- Day/night cycle with a procedural sky — gradient, sun, moon, twinkling stars,
+- Day/night cycle with a procedural sky: gradient, sun, moon, twinkling stars,
   sunset reddening, and drifting volumetric-ish clouds
 - Falling sand/gravel, plants that pop when unsupported, crops that grow,
   saplings that grow into trees, TNT with chain reactions
@@ -32,7 +32,7 @@ current Chrome, Edge, Firefox or Safari.)
 
 **Survival**
 - Health, hunger, saturation, exhaustion, air, XP and levels
-- 8 mob types with distinct box models and AI — pig, cow, sheep, chicken,
+- 8 mob types with distinct box models and AI: pig, cow, sheep, chicken,
   zombie, skeleton, creeper (fuses and explodes), spider. Hostiles spawn in the
   dark, burn in daylight, chase and attack; passives wander and flee
 - Fall damage, drowning, suffocation, lava, starvation
@@ -44,7 +44,7 @@ current Chrome, Edge, Firefox or Safari.)
 **Interface**
 - 99 crafting recipes, shaped and shapeless, in 2×2 and 3×3 grids
 - A **"can craft now"** panel that shows what your current inventory allows and
-  crafts it in one click — no wiki needed
+  crafts it in one click, no wiki needed
 - Working furnaces (fuel burn times, smelting, XP) and chests, with contents saved
 - Drag-and-drop inventory with stack splitting, shift-click transfer, armour slots
 - Hotbar, hearts/hunger/armour/air/XP HUD, item tooltips, F3 debug overlay
@@ -87,7 +87,7 @@ into a `<script type="text/x-worker">` tag, then:
   exact same block and item tables.
 
 Because Blob workers are blocked on `file://` in some browsers, a watchdog falls
-back to running that identical code on the main thread in time-sliced chunks — so
+back to running that identical code on the main thread in time-sliced chunks, so
 the file works whether you double-click it or serve it over HTTP.
 
 Other notes:

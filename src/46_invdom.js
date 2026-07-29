@@ -107,7 +107,7 @@ function buildInvPanel() {
   if (UI.open === 'inv' || UI.open === 'table') {
     var right = el('div');
     right.style.width = '212px';
-    right.appendChild(el('div', 'invtitle', 'Can craft now — click to make'));
+    right.appendChild(el('div', 'invtitle', 'Can craft now: click to make'));
     var list = el('div'); list.id = 'reclist';
     list.style.maxHeight = '330px'; list.style.overflowY = 'auto';
     list.style.background = '#b0b0b0'; list.style.padding = '4px';
@@ -174,7 +174,7 @@ function refreshRecipeList() {
     })(avail[i]);
   }
   if (!avail.length) {
-    var m = el('div', null, 'Nothing craftable yet — punch a tree.');
+    var m = el('div', null, 'Nothing craftable yet. Punch a tree.');
     m.style.gridColumn = 'span 4'; m.style.fontSize = '11px'; m.style.padding = '6px';
     list.appendChild(m);
   }

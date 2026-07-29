@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>Blockcraft — a Minecraft clone in one HTML file</title>
+<title>Blockcraft: a Minecraft clone in one HTML file</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html,body { width:100%; height:100%; overflow:hidden; background:#000;
@@ -176,16 +176,16 @@
 <div class="screen" id="title">
   <div class="panel">
     <div id="titlelogo">BLOCKCRAFT</div>
-    <div id="titlesub">an infinite voxel sandbox — single HTML file, no dependencies</div>
+    <div id="titlesub">an infinite voxel sandbox: single HTML file, no dependencies</div>
     <div class="field"><label>World seed</label><input id="seedin" placeholder="leave blank for random"></div>
     <div class="field"><label>Game mode</label>
       <select id="modein"><option value="survival">Survival</option><option value="creative">Creative</option></select>
     </div>
     <div class="field"><label>Render distance</label>
       <select id="distin">
-        <option value="4">4 — tiny</option><option value="6">6 — short</option>
-        <option value="8" selected>8 — normal</option><option value="12">12 — far</option>
-        <option value="16">16 — extreme</option>
+        <option value="4">4 (tiny)</option><option value="6">6 (short)</option>
+        <option value="8" selected>8 (normal)</option><option value="12">12 (far)</option>
+        <option value="16">16 (extreme)</option>
       </select>
     </div>
     <button class="btn" id="btnplay">Create New World</button>
@@ -2720,7 +2720,7 @@ function initGL() {
     antialias: false, alpha: false, depth: true, stencil: false,
     powerPreference: 'high-performance'
   });
-  if (!gl) throw new Error('WebGL2 is required — try a current Chrome, Edge, Firefox or Safari.');
+  if (!gl) throw new Error('WebGL2 is required. Try a current Chrome, Edge, Firefox or Safari.');
   gl.clearColor(.5, .7, 1, 1);
   gl.enable(gl.DEPTH_TEST);
   gl.depthFunc(gl.LEQUAL);
@@ -5097,7 +5097,7 @@ function buildInvPanel() {
   if (UI.open === 'inv' || UI.open === 'table') {
     var right = el('div');
     right.style.width = '212px';
-    right.appendChild(el('div', 'invtitle', 'Can craft now — click to make'));
+    right.appendChild(el('div', 'invtitle', 'Can craft now: click to make'));
     var list = el('div'); list.id = 'reclist';
     list.style.maxHeight = '330px'; list.style.overflowY = 'auto';
     list.style.background = '#b0b0b0'; list.style.padding = '4px';
@@ -5164,7 +5164,7 @@ function refreshRecipeList() {
     })(avail[i]);
   }
   if (!avail.length) {
-    var m = el('div', null, 'Nothing craftable yet — punch a tree.');
+    var m = el('div', null, 'Nothing craftable yet. Punch a tree.');
     m.style.gridColumn = 'span 4'; m.style.fontSize = '11px'; m.style.padding = '6px';
     list.appendChild(m);
   }
@@ -6582,7 +6582,7 @@ function updateDebug() {
   var light = c.lightAt(bx, by + 1, bz, 1);
   var s = GAME.stats || {};
   document.getElementById('debug').textContent =
-    'Blockcraft — ' + GAME.fps + ' fps   (' + (c.link.mode) + ' worker)\n' +
+    'Blockcraft: ' + GAME.fps + ' fps   (' + (c.link.mode) + ' worker)\n' +
     'XYZ ' + p.x.toFixed(2) + ' / ' + p.y.toFixed(2) + ' / ' + p.z.toFixed(2) + '\n' +
     'Block ' + bx + ' ' + by + ' ' + bz + '   Chunk ' + (bx >> 4) + ' ' + (bz >> 4) + '\n' +
     'Facing ' + facing + '   Biome ' + (biome ? biome.name : '?') + '\n' +
@@ -6790,7 +6790,7 @@ var HELP_TEXT =
   '<b>Hotbar</b> 1-9 or scroll &nbsp; <b>Chat / commands</b> T or / &nbsp; <b>Debug</b> F3<br>' +
   '<b>Fly</b> (creative) double-tap Space &nbsp; <b>Third person</b> F5 &nbsp; <b>Menu</b> Esc<br><br>' +
   'Punch a tree to get wood, craft planks, then a crafting table and tools. ' +
-  'Torches keep monsters away — they spawn in the dark. Sleep is not implemented, so ' +
+  'Torches keep monsters away. They spawn in the dark. Sleep is not implemented, so ' +
   'build a shelter before the first night.';
 
 function boot() {
@@ -6883,7 +6883,7 @@ function startGame(seed, mode, dist, save) {
       clearInterval(iv);
       hideLoading();
       setTimeout(function () { requestLock(); }, 300);
-      chat('Welcome to Blockcraft — press T for chat, /help for commands');
+      chat('Welcome to Blockcraft: press T for chat, /help for commands');
       if (!save) chat('Seed: ' + seed);
     }
   }, 100);

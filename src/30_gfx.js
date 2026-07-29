@@ -104,7 +104,7 @@ function initGL() {
     antialias: false, alpha: false, depth: true, stencil: false,
     powerPreference: 'high-performance'
   });
-  if (!gl) throw new Error('WebGL2 is required — try a current Chrome, Edge, Firefox or Safari.');
+  if (!gl) throw new Error('WebGL2 is required. Try a current Chrome, Edge, Firefox or Safari.');
   gl.clearColor(.5, .7, 1, 1);
   gl.enable(gl.DEPTH_TEST);
   gl.depthFunc(gl.LEQUAL);
