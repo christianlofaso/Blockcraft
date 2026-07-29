@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC = path.join(__dirname, 'src');
-const OUT = path.join(__dirname, 'minecraft.html');
+const OUT = path.join(__dirname, 'blockcraft.html');
 
 /* Code shared by the main thread and the Worker. This block is emitted into a
    <script type="text/x-worker"> tag, evaluated globally on the main thread and

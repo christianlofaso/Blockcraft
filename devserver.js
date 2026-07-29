@@ -23,7 +23,7 @@ http.createServer((req, res) => {
     return;
   }
   let p = decodeURIComponent(req.url.split('?')[0]);
-  if (p === '/') p = '/minecraft.html';
+  if (p === '/') p = '/blockcraft.html';
   const file = path.join(ROOT, p);
   if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
     res.writeHead(404); res.end('not found'); return;

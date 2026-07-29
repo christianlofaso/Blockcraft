@@ -4,7 +4,7 @@ An infinite voxel sandbox game in a **single HTML file**. No dependencies, no bu
 step required to play, no network access, no external assets. Every texture is
 painted by code at load time and every sound is synthesized with the Web Audio API.
 
-**To play: double-click `minecraft.html`.** (Requires a browser with WebGL 2:
+**To play: double-click `blockcraft.html`.** (Requires a browser with WebGL 2:
 current Chrome, Edge, Firefox or Safari.)
 
 ---
@@ -72,10 +72,10 @@ current Chrome, Edge, Firefox or Safari.)
 
 ## How it's built
 
-`minecraft.html` is generated from the modules in `src/`:
+`blockcraft.html` is generated from the modules in `src/`:
 
 ```
-node build.js        # concatenates src/* -> minecraft.html
+node build.js        # concatenates src/* -> blockcraft.html
 ```
 
 The interesting part of the architecture is that world generation, lighting and
